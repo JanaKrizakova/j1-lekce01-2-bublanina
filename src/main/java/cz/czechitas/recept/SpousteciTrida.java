@@ -36,11 +36,41 @@ public class SpousteciTrida {
 
         //---------------------------------------------------------------------
 
-        // TODO: Sem napiste recept na bublaninu
-        // Pouzivejte napovidani v editoru.
-        // Vyskakuje samo nebo pomoci Ctrl+Mezernik
-
         cervenaMiska.nalozSiJedenKus(vajicka);
-    }
+        cervenaMiska.nalozSiJedenKus(vajicka);
+        cervenaMiska.nalozSiJedenKus(vajicka);
+        cervenaMiska.nalozSiJedenKus(vajicka);
+        cervenaMiska.nalozSiCelyObsah(pytlikCukru);
+        mixer.zamichej(cervenaMiska);
 
+        cervenaMiska.nalozSiCelyObsah(maslo125g);
+        mixer.zamichej(cervenaMiska);
+
+        kuchynskaVaha.vynulujSeS(zlutaMiska);
+        while (kuchynskaVaha.zjistiHmotnost(zlutaMiska) != 250) {
+            if (kuchynskaVaha.zjistiHmotnost(zlutaMiska) < 250) {
+                zlutaMiska.nalozSiTrochu(pytlikMouky);
+            } else {
+                zlutaMiska.vylozSiTrochu();
+            }
+        }
+
+        cervenaMiska.nalozSiObsahJineMisky(zlutaMiska);
+        cervenaMiska.nalozSiCelyObsah(prasekDoPeciva);
+        mixer.zamichej(cervenaMiska);
+
+        plech.preberSiObsah(cervenaMiska);
+
+        for (int i = 0; i < 50; i++) {
+            plech.posypSeKusem(ovoce);
+        }
+
+        trouba.zapniSe(180);
+        trouba.nechejPect(5);
+        trouba.vlozSiDovnitr(plech);
+        trouba.nechejPect(25);
+        trouba.vypniSe();
+
+        trouba.vyndejObsahVen();
+    }
 }
